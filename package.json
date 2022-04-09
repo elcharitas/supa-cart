@@ -1,0 +1,24 @@
+{
+    "name": "supa-cart",
+    "version": "1.0.0",
+    "description": "A supabase powered react app for store inventory management",
+    "main": "index.js",
+    "repository": "https://github.com/elcharitas/supa-cart",
+    "author": "elcharitas <jonathanirhodia@gmail.com>",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "@chakra-ui/react": "^1.8.8",
+        "@emotion/react": "^11",
+        "@emotion/styled": "^11",
+        "@saas-ui/palette": "^0.5.0",
+        "@saas-ui/react": "^0.12.7",
+        "@supabase/supabase-js": "^1.33.3",
+        "chart.js": "^3.7.1",
+        "framer-motion": "^6",
+        "next": "^12.1.4",
+        "react": "^18.0.0",
+        "react-chartjs-2": "^4.1.0",
+        "react-dom": "^18.0.0"
+    }
+}
