@@ -32,7 +32,7 @@ yarn dev
 
 ### How to Use SupaCart
 
-To see Supa Cart in action, Watch this (Loom Recording)[]
+To see Supa Cart in action, Watch this (Loom Recording)[https://www.loom.com/share/64da9a53620b4d70ad610f878c119f82]
 
 ### Where was Supabase Used?
 
