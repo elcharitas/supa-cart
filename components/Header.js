@@ -9,6 +9,7 @@ import {
     Button,
     useColorMode,
 } from "@chakra-ui/react";
+import { Auth, useModals } from "@saas-ui/react";
 import Link from "next/link";
 
 import { AiOutlineMenu } from "react-icons/ai";
@@ -18,12 +19,12 @@ import Logo from "./Logo";
 
 export default function Header() {
     const { toggleColorMode } = useColorMode();
-    const text = useColorModeValue("dark", "light");
     const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
     const bgColor = useColorModeValue("white", "gray.800");
-    const color = useColorModeValue("gray.800", "white");
     const mobileNav = useDisclosure();
+
+    const modal = useModals();
 
     return (
         <React.Fragment>
@@ -86,20 +87,49 @@ export default function Header() {
                                 mx="5"
                             >
                                 <Button
-                                    as={"a"}
-                                    href="/signup"
                                     colorScheme="green"
                                     variant="solid"
                                     size="sm"
+                                    onClick={() => {
+                                        modal.open({
+                                            body: (
+                                                <Auth
+                                                    title=""
+                                                    view="signup"
+                                                    providers={{
+                                                        github: {
+                                                            icon: FaGithub,
+                                                            name: "Github",
+                                                        },
+                                                    }}
+                                                    type="password"
+                                                />
+                                            ),
+                                        });
+                                    }}
                                 >
                                     Sign up
                                 </Button>
                                 <Button
-                                    as={"a"}
-                                    href="/signin"
                                     colorScheme="green"
                                     variant="ghost"
                                     size="sm"
+                                    onClick={() => {
+                                        modal.open({
+                                            body: (
+                                                <Auth
+                                                    title=""
+                                                    providers={{
+                                                        github: {
+                                                            icon: FaGithub,
+                                                            name: "Github",
+                                                        },
+                                                    }}
+                                                    type="password"
+                                                />
+                                            ),
+                                        });
+                                    }}
                                 >
                                     Sign in
                                 </Button>
