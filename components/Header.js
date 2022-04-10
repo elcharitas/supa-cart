@@ -38,9 +38,9 @@ export default function Header() {
                         justifyContent="space-between"
                     >
                         <Flex align="flex-start" alignItems="center">
-                            <Flex as={Link} href="/">
+                            <HStack as="a" href="/">
                                 <Logo />
-                            </Flex>
+                            </HStack>
                             <HStack
                                 mx="5"
                                 spacing="5"
