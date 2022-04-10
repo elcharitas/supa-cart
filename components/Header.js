@@ -12,6 +12,7 @@ import {
 import { Auth, useModals, useAuth } from "@saas-ui/react";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaGoogle, FaMoon, FaSun, FaTwitter } from "react-icons/fa";
@@ -27,6 +28,7 @@ export default function Header({ title = "Welcome" }) {
 
     const modal = useModals();
     const { user } = useAuth();
+    const router = useRouter();
 
     return (
         <>
@@ -96,6 +98,7 @@ export default function Header({ title = "Welcome" }) {
                                     colorScheme="green"
                                     variant="solid"
                                     size="sm"
+                                    fontSize="small"
                                     onClick={() => {
                                         modal.open({
                                             body: (
@@ -112,6 +115,12 @@ export default function Header({ title = "Welcome" }) {
                                                             name: "Google",
                                                         },
                                                     }}
+                                                    onSuccess={() => {
+                                                        router.push(
+                                                            "/dashboard/" +
+                                                                user?.id
+                                                        );
+                                                    }}
                                                 />
                                             ),
                                         });
@@ -123,6 +132,7 @@ export default function Header({ title = "Welcome" }) {
                                     colorScheme="green"
                                     variant="ghost"
                                     size="sm"
+                                    fontSize="small"
                                     onClick={() => {
                                         modal.open({
                                             body: (
@@ -137,6 +147,12 @@ export default function Header({ title = "Welcome" }) {
                                                             icon: FaGoogle,
                                                             name: "Google",
                                                         },
+                                                    }}
+                                                    onSuccess={() => {
+                                                        router.push(
+                                                            "/dashboard/" +
+                                                                user?.id
+                                                        );
                                                     }}
                                                 />
                                             ),
