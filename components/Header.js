@@ -1,6 +1,6 @@
-import React from "react";
 import {
     chakra,
+    Avatar,
     HStack,
     Flex,
     IconButton,
@@ -9,7 +9,8 @@ import {
     Button,
     useColorMode,
 } from "@chakra-ui/react";
-import { Auth, useModals } from "@saas-ui/react";
+import { Auth, useModals, useAuth } from "@saas-ui/react";
+import Head from "next/head";
 import Link from "next/link";
 
 import { AiOutlineMenu } from "react-icons/ai";
@@ -17,7 +18,7 @@ import { FaGithub, FaGoogle, FaMoon, FaSun, FaTwitter } from "react-icons/fa";
 
 import Logo from "./Logo";
 
-export default function Header() {
+export default function Header({ title = "Welcome" }) {
     const { toggleColorMode } = useColorMode();
     const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
@@ -25,9 +26,13 @@ export default function Header() {
     const mobileNav = useDisclosure();
 
     const modal = useModals();
+    const { user } = useAuth();
 
     return (
-        <React.Fragment>
+        <>
+            <Head>
+                <title>{title + " | SupaCart"}</title>
+            </Head>
             <chakra.header w="full" shadow={"md"} bg={bgColor}>
                 <chakra.div h="3.5rem" mx="auto">
                     <Flex
@@ -85,6 +90,7 @@ export default function Header() {
                                 spacing="5"
                                 display={{ base: "none", md: "flex" }}
                                 mx="5"
+                                hidden={user?.id}
                             >
                                 <Button
                                     colorScheme="green"
@@ -140,6 +146,15 @@ export default function Header() {
                                     Sign in
                                 </Button>
                             </HStack>
+                            <Avatar
+                                as="a"
+                                href="/dashboard"
+                                ml="4"
+                                size="sm"
+                                name={user?.email}
+                                cursor="pointer"
+                                hidden={!user}
+                            />
                             <IconButton
                                 display={{ base: "flex", md: "none" }}
                                 aria-label="Open menu"
@@ -153,6 +168,6 @@ export default function Header() {
                     </Flex>
                 </chakra.div>
             </chakra.header>
-        </React.Fragment>
+        </>
     );
 }
