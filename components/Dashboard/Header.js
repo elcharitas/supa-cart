@@ -26,7 +26,7 @@ export default function Header({ sidebar, title }) {
                 px="4"
                 bg={color}
                 borderBottomWidth="1px"
-                borderColor={color}
+                borderColor={"inherit"}
                 h="14"
             >
                 <IconButton
@@ -38,27 +38,23 @@ export default function Header({ sidebar, title }) {
                 />
 
                 <Flex align="center">
-                    <HStack
-                        spacing="5"
-                        display={{ base: "none", md: "flex" }}
-                        mx="5"
-                    >
-                        <Button colorScheme="green" variant="solid" size="sm">
-                            Shop Keeper
-                        </Button>
+                    <HStack spacing="5" display={{ base: "none", md: "flex" }}>
                         <Button
                             colorScheme="green"
-                            variant="ghost"
+                            variant="outline"
                             size="sm"
+                            fontSize="small"
                             onClick={logOut}
                         >
                             Sign Out
                         </Button>
                     </HStack>
                     <Avatar
+                        as="a"
                         ml="4"
                         size="sm"
                         name={user?.email}
+                        href="dashboard/settings"
                         cursor="pointer"
                     />
                 </Flex>
