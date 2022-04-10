@@ -5,7 +5,7 @@ import { MdAccountTree, MdHome, MdInventory, MdReceipt } from "react-icons/md";
 import NavItem from "./NavItem";
 import Logo from "../Logo";
 
-export default function Sidebar(props) {
+export default function Sidebar({ id, ...props }) {
     return (
         <Box
             as="nav"
@@ -30,19 +30,31 @@ export default function Sidebar(props) {
                 <Logo />
             </Flex>
             <Flex fontSize="sm" color="gray.600" direction="column">
-                <NavItem href="dashboard" icon={MdHome}>
+                <NavItem href={"/dashboard/" + id} icon={MdHome}>
                     Home
                 </NavItem>
-                <NavItem href="dashboard/invoice" icon={MdReceipt}>
+                <NavItem
+                    href={"/dashboard/" + id + "/invoice"}
+                    icon={MdReceipt}
+                >
                     Invoice
                 </NavItem>
-                <NavItem href="dashboard/warehouse" icon={MdInventory}>
+                <NavItem
+                    href={"/dashboard/" + id + "/warehouse"}
+                    icon={MdInventory}
+                >
                     Warehouse
                 </NavItem>
-                <NavItem href="dashboard/keepers" icon={MdAccountTree}>
+                <NavItem
+                    href={"/dashboard/" + id + "/keepers"}
+                    icon={MdAccountTree}
+                >
                     Shop Keepers
                 </NavItem>
-                <NavItem href="dashboard/settings" icon={BsGearFill}>
+                <NavItem
+                    href={"/dashboard/" + id + "/settings"}
+                    icon={BsGearFill}
+                >
                     Settings
                 </NavItem>
             </Flex>

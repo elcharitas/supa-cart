@@ -33,7 +33,10 @@ export default function Dashboard({ title = "Home", children }) {
             </Drawer>
             <Box as="main">
                 <Header title={title} sidebar={sidebar} />
-                <Sidebar display={{ base: "none", md: "unset" }} />
+                <Sidebar
+                    id={user?.id}
+                    display={{ base: "none", md: "unset" }}
+                />
                 <Box ml={{ base: 0, md: 60 }} transition=".3s ease">
                     <Box as="main" p="4">
                         {children}

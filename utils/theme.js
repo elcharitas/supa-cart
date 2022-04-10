@@ -1,5 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-import { baseTheme } from "@saas-ui/react";
+import { baseTheme, createPalette } from "@saas-ui/react";
 import "@fontsource/montserrat";
 import "@fontsource/poppins";
 
@@ -12,6 +12,7 @@ export const theme = extendTheme(
         config: {
             cssVarPrefix: "ck",
         },
+        colors: {},
     },
     baseTheme
 );
