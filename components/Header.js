@@ -13,7 +13,7 @@ import { Auth, useModals } from "@saas-ui/react";
 import Link from "next/link";
 
 import { AiOutlineMenu } from "react-icons/ai";
-import { FaGithub, FaMoon, FaSun, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaGoogle, FaMoon, FaSun, FaTwitter } from "react-icons/fa";
 
 import Logo from "./Logo";
 
@@ -101,6 +101,10 @@ export default function Header() {
                                                             icon: FaGithub,
                                                             name: "Github",
                                                         },
+                                                        google: {
+                                                            icon: FaGoogle,
+                                                            name: "Google",
+                                                        },
                                                     }}
                                                     type="password"
                                                 />
@@ -123,6 +127,10 @@ export default function Header() {
                                                         github: {
                                                             icon: FaGithub,
                                                             name: "Github",
+                                                        },
+                                                        google: {
+                                                            icon: FaGoogle,
+                                                            name: "Google",
                                                         },
                                                     }}
                                                     type="password"
