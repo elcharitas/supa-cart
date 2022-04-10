@@ -148,7 +148,7 @@ export default function Header({ title = "Welcome" }) {
                             </HStack>
                             <Avatar
                                 as="a"
-                                href="/dashboard"
+                                href={"/dashboard/" + user?.id}
                                 ml="4"
                                 size="sm"
                                 name={user?.email}
