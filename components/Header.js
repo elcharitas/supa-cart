@@ -106,7 +106,6 @@ export default function Header() {
                                                             name: "Google",
                                                         },
                                                     }}
-                                                    type="password"
                                                 />
                                             ),
                                         });
@@ -133,7 +132,6 @@ export default function Header() {
                                                             name: "Google",
                                                         },
                                                     }}
-                                                    type="password"
                                                 />
                                             ),
                                         });
