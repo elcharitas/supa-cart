@@ -36,14 +36,15 @@ export default function Header() {
                         alignItems="center"
                         justifyContent="space-between"
                     >
-                        <Flex align="flex-start">
+                        <Flex align="flex-start" alignItems="center">
+                            <Flex as={Link} href="/">
+                                <Logo />
+                            </Flex>
                             <HStack
+                                mx="5"
                                 spacing="5"
                                 display={{ base: "none", md: "flex" }}
                             >
-                                <Flex alignItems="center" as={Link} href="/">
-                                    <Logo />
-                                </Flex>
                                 <Link href="/guide">Guide</Link>
                                 <Link href="/pricing">Pricing</Link>
                             </HStack>
@@ -57,7 +58,7 @@ export default function Header() {
                                 size="md"
                                 fontSize="lg"
                                 variant="ghost"
-                                color="black"
+                                color={useColorModeValue("black", "white")}
                                 onClick={toggleColorMode}
                                 icon={<SwitchIcon />}
                             />
@@ -67,7 +68,7 @@ export default function Header() {
                                 size="md"
                                 fontSize="lg"
                                 variant="ghost"
-                                color="black"
+                                color={useColorModeValue("black", "white")}
                                 icon={<FaGithub size="20px" />}
                             />
                             <IconButton
@@ -76,7 +77,7 @@ export default function Header() {
                                 size="md"
                                 fontSize="lg"
                                 variant="ghost"
-                                color="black"
+                                color={useColorModeValue("black", "white")}
                                 icon={<FaTwitter size="20px" />}
                             />
                             <HStack
