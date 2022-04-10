@@ -9,12 +9,12 @@
 
 ### Technologies and Services Used
 
-- (Supabase)[https://supabase.com]
+- [Supabase](https://supabase.com)
 - NextJS by Vercel
-- (ReactJs)[https://reactjs.org]
-- (SaaS UI)[https://github.com/saas-js/saas-ui]
-- (Chakra UI)[https://chakra-ui.com]
-- (vercel)[https://vercel.com] for deployment
+- [ReactJs](https://reactjs.org)
+- [SaaS UI](https://github.com/saas-js/saas-ui)
+- [Chakra UI](https://chakra-ui.com)
+- [vercel](https://vercel.com) for deployment
 
 ### Get Started
 
@@ -32,18 +32,18 @@ yarn dev
 
 ### How to Use SupaCart
 
-To see Supa Cart in action, Watch this (Loom Recording)[https://www.loom.com/share/64da9a53620b4d70ad610f878c119f82]
+To see Supa Cart in action, Watch this [Loom Recording](https://www.loom.com/share/64da9a53620b4d70ad610f878c119f82)
 
 ### Where was Supabase Used?
 
 Supabase was used throughout most of the application. However more concisely, to handle
-- Authentication - Made easy with (SaaS UI)[https://github.com/saas-js/saas-ui]
+- Authentication - Made easy with [SaaS UI](https://github.com/saas-js/saas-ui)
 - Realtime Database - Storing and Retrieving Shop Keepers, Products in Warehouse, Sales etc
 
 
 ### Team Members (1)
 
-(**elcharitas <jonathanirhodia@gmail.com>**)[https://elcharitas.dev]
+[**elcharitas <jonathanirhodia@gmail.com>**](https://elcharitas.dev)
 
 * Twitter: [@iamelcharitas](https://twitter.com/iamelcharitas)
 * Github: [@elcharitas](https://github.com/elcharitas)
@@ -52,16 +52,16 @@ Supabase was used throughout most of the application. However more concisely, to
 ### To-Do
 
 SupaCart using supabase works so easily and thanks to 
-(SaaS UI)[https://github.com/saas-js/saas-ui] having a support for supabase by default,
+[SaaS UI](https://github.com/saas-js/saas-ui) having a support for supabase by default,
 creating auth pages is quite seamless too.
 In the future I hope to add more specifics to SupaCart
 
-[ ] User Avatars
-[ ] Personalized Stores
-[ ] Shop Keepers access Stores
-[ ] Track Inventory
-[ ] Track Sales
-[ ] Generate Reports as PDFs
+- [ ] User Avatars
+- [ ] Personalized Stores
+- [ ] Shop Keepers access Stores
+- [ ] Track Inventory
+- [ ] Track Sales
+- [ ] Generate Reports as PDFs
 
 ## Show your support
 
