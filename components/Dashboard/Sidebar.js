@@ -20,7 +20,13 @@ export default function Sidebar(props) {
             borderRightWidth="1px"
             {...props}
         >
-            <Flex px="4" py="5" align="center">
+            <Flex
+                px="4"
+                borderBottom="1px"
+                borderColor="inherit"
+                py="3"
+                align="center"
+            >
                 <Logo />
             </Flex>
             <Flex fontSize="sm" color="gray.600" direction="column">

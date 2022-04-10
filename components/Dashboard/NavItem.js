@@ -1,10 +1,12 @@
 import { Flex, Icon, useColorModeValue } from "@chakra-ui/react";
 import { FaCheck } from "react-icons/fa";
 
-export default function NavItem({ icon = FaCheck, children }) {
+export default function NavItem({ icon = FaCheck, href, children }) {
     const color = useColorModeValue("gray.600", "gray.300");
     return (
         <Flex
+            as="a"
+            href={href}
             p="4"
             align="center"
             cursor="pointer"
