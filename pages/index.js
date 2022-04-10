@@ -1,15 +1,10 @@
-import {
-    chakra,
-    Box,
-    Button,
-    Flex,
-    useColorModeValue,
-    Link,
-} from "@chakra-ui/react";
+import { chakra, Box, Button, Flex, useColorModeValue } from "@chakra-ui/react";
+import { useAuth } from "@saas-ui/react";
 
 import Header from "../components/Header";
 
 export default function Home() {
+    const { user } = useAuth();
     return (
         <>
             <Header />
@@ -48,6 +43,8 @@ export default function Home() {
                     <Box display="inline-flex" rounded="md" shadow="md">
                         <Button
                             w="full"
+                            as="a"
+                            href={user?.id ? "/dashboard/" + user?.id : "#"}
                             alignItems="center"
                             justifyContent="center"
                             px={12}
