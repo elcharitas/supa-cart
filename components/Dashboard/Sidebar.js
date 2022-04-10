@@ -24,11 +24,21 @@ export default function Sidebar(props) {
                 <Logo />
             </Flex>
             <Flex fontSize="sm" color="gray.600" direction="column">
-                <NavItem icon={MdHome}>Home</NavItem>
-                <NavItem icon={MdReceipt}>Invoice</NavItem>
-                <NavItem icon={MdInventory}>Warehouse</NavItem>
-                <NavItem icon={MdAccountTree}>Shop Keepers</NavItem>
-                <NavItem icon={BsGearFill}>Settings</NavItem>
+                <NavItem href="dashboard" icon={MdHome}>
+                    Home
+                </NavItem>
+                <NavItem href="dashboard/invoice" icon={MdReceipt}>
+                    Invoice
+                </NavItem>
+                <NavItem href="dashboard/warehouse" icon={MdInventory}>
+                    Warehouse
+                </NavItem>
+                <NavItem href="dashboard/keepers" icon={MdAccountTree}>
+                    Shop Keepers
+                </NavItem>
+                <NavItem href="dashboard/settings" icon={BsGearFill}>
+                    Settings
+                </NavItem>
             </Flex>
         </Box>
     );
